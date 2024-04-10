@@ -1,6 +1,17 @@
 import { createContext } from 'react'
 
-export default createContext({
-  isLoading: false,
-  errorMessage: ''
-})
+// export interface StateProps {
+//   isLoading: boolean
+//   errorMessage: string
+//   emailError: string
+//   passwordError: string
+// }
+
+// export default createContext<StateProps>({
+//   isLoading: false,
+//   errorMessage: '',
+//   emailError: '',
+//   passwordError: ''
+// })
+
+export default createContext<any>({} as any)
