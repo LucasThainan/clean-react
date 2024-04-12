@@ -17,7 +17,7 @@ type SutParams = {
   validationError: string
 }
 
-const history: any = createMemoryHistory()
+const history: any = createMemoryHistory({ initialEntries: ['/login'] })
 const makeSut = (params?: SutParams): SutTypes => {
   const validationStub = new ValidationStub()
   validationStub.errorMessage = params?.validationError ?? ''
@@ -156,6 +156,7 @@ describe('Login Component', () => {
     await waitFor(() => sut.getByTestId('form'))
     // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(localStorage.setItem).toHaveBeenCalledWith('accessToken', authenticationSpy.account.accessToken)
+    expect(history.location.pathname).toBe('/')
   })
 
   test('Should go to signup page', async () => {
