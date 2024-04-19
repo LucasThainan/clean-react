@@ -1,14 +1,15 @@
 {
   "name": "clean-react",
   "version": "1.0.1",
-  "description": "",
+  "description": "ReactJs project using TDD, Clean Architecture, SOLID and Typescript",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "npm test -- --watch",
     "test:staged": "npm test -- --findRelatedTests",
-    "test:ci": "npm test -- --coverage"
+    "test:ci": "npm test -- --coverage",
+    "check": "npm-check -u -s"
   },
   "keywords": [],
   "author": "",
