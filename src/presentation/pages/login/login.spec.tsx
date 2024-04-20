@@ -166,7 +166,6 @@ describe('Login Component', () => {
   test('Should add accessToken to localstorage on success', async () => {
     const { sut, authenticationSpy } = makeSut()
     await simulateValidSubmit(sut)
-    // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(localStorage.setItem).toHaveBeenCalledWith('accessToken', authenticationSpy.account.accessToken)
     expect(history.location.pathname).toBe('/')
   })
